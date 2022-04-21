@@ -1,0 +1,496 @@
+/* 1. Global Styles
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,700;1,800&display=swap');
+}
+
+html {
+    margin: 0 auto;
+    overflow-x: hidden;
+    width: 100%; 
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    position: relative;
+    max-width: auto;
+    max-height: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* 2. Header
+======================================== */
+
+header {
+    max-width: 1440px;
+    max-height: 300px;
+    padding: 60px 0 60px 90px;
+    top: 0;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    flex-direction: row;
+    margin: auto;
+}
+
+.content {
+    flex: 1;
+    max-width: 720px;
+}
+
+.navigation {
+    flex: 2;
+
+}
+
+.content h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+}
+
+.navigation li{
+    float: left;
+    font-size: 1.2rem;
+    display: inline;
+    padding-top: 150px;
+    justify-content: flex-end;
+
+}
+
+li {
+    padding: 0 30px;
+}
+
+.link-menu:hover {
+    color: #3172F1;
+    cursor: pointer;
+}
+
+.link-menu {
+    text-decoration: none;
+    color: black;
+}
+
+/* 3. Homepage
+======================================== */
+
+.homepage {
+    display: flex;
+    justify-content: flex-start;
+    background-image: url('images/main.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 550px;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.homepage p {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    font-size: 0.7rem;
+    color: white;
+}
+
+
+.main-page-quote {
+    display: flex;
+    height: 550px;
+    width: 410px;
+    border-radius: 0 15px 15px 0;
+    background-color: #3172F1;
+    color: white;
+    box-shadow: 15px 20px 30px 0px rgba(0, 0, 0, .15);
+    position: relative;
+}
+
+.main-page-quote h4 {
+    position: absolute;                 
+    bottom: 30px;                         
+    left: 0;
+    padding: 0 25px 20px;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.35em;
+}
+
+.main-page-quote p {
+    position: absolute;                 
+    bottom: 0px;                         
+    right: 10px;
+    padding: 0 25px 20px;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.35em;
+}
+
+.stop-war-icon {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 99px;
+    height: 99px;
+}
+
+/* 4. About
+======================================== */
+
+#about {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1440px;
+    height: auto;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.about-text-horizontal {
+    position: relative;
+    padding-top: 100px;
+}
+
+.about-text-horizontal h1 {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+.about-text-horizontal p {
+    font-weight: 300;
+    line-height: 1.6em;
+    padding-bottom: 50px;
+    max-width: 65%;
+    margin: auto;
+}
+
+.link {
+    text-decoration: none;
+    color: #3172F1;
+}
+
+.about-block-two {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-text-vertical {
+    display: flex;
+    justify-content: flex-start;
+    width: 1440px;
+    position: relative;
+    flex-direction: column;
+}
+
+.about-heading {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    line-height: 1.4em;
+    text-align: left;
+    max-width: 70%;
+    padding-top: 50px;
+}
+
+.about-text-vertical p {
+    font-weight: 300;
+    line-height: 1.6em;
+    max-width: 100%;
+    padding-bottom: 30px;
+    margin: 0;
+}
+
+.about-text-vertical-img {
+    flex: 1;
+    margin: 50px 0 100px 100px;
+}
+
+button {
+    background-color: #3172F1;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 25px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+button:hover {
+    background-color: #3172F1;
+    color: white;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+/* 5. Call-to-action
+======================================== */
+
+.call-to-action {
+    margin: auto;
+    background-image: url('images/break.jpg');
+    background-repeat: no-repeat;
+    max-width: 1440px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    border-radius: 0 20px 0 20px;
+    height: 220px;
+    row-gap: 50px;
+    position: relative;
+}
+
+.call-to-action img {
+    width: 99px;
+    height: 99px;
+    position: absolute;
+    left: 100px;
+    top: 60px;
+}
+
+.call-to-action h1 {
+    color: white;
+    position: absolute;
+    left: 300px;
+    top: 60px
+}
+
+/* 6. Cities
+======================================== */
+#cities {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1440px;
+    height: auto;
+    padding: 0px 90px 100px 90px;
+    position: relative;
+}
+
+.cities-heading {
+    padding-top: 140px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+.cities-cards {
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+}
+
+.cities-cards-left,
+.cities-cards-right {
+    flex: 1;
+}
+
+.cities-cards-left,
+.cities-cards-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-big {
+    max-width: 620px;
+    max-height: 690px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.card-big h3 {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 620px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-left: 20px;
+    padding-top: 20px;
+    margin: 0;
+}
+
+.card-small {
+    position: relative;
+    max-width: 620px;
+    max-height: 200px;
+    margin-bottom: 20px;
+}
+
+.card-small h3 {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 620px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-left: 20px;
+    padding-top: 20px;
+    margin: 0;
+}
+
+.cities-tags-heading h3 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    padding-top: 40px;
+    margin-left: 15px;
+}
+
+.cities-tags-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.tag {
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+}
+
+.tag p{
+  font-family: 'Montserrat';
+  font-size: 1rem;  
+  padding: 0 25px;
+}
+
+.tag:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.tag p:hover {
+    color: #3172F1;
+}
+
+
+/* 8. Help
+======================================== */
+
+#help {
+    background-image: url(images/help.jpg);
+    margin: 50px auto;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 1440px;
+    height: 770px;
+    background-position: center;
+    position: relative;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#help h1 {
+    position: absolute;
+    bottom: 40px;
+    left: 80px;
+    max-width: 100px;
+    color: white;
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: 'Montserrat';
+}
+
+span {
+    color: #FFD801;
+}
+
+.help-button {
+    background-color: black;
+    border-color: #FFD801;
+    border-width: 2px;
+    border-style: solid;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 25px;
+    position: absolute;
+    right: 80px;
+    bottom: 40px;
+}
+
+
+.help-button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.help-button a {
+    text-decoration: none;
+}
+
+
+/* 9. Team
+======================================== */
+
+#team {
+    margin: 120px auto;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-heading {
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+.team-member {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 100px;
+    column-gap: 50px;
+    margin: 60px auto;
+    max-width: 1440px;
+}
+
+.team-member-card img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.team-member-card {
+    text-align: center;
+}
+
+.team-member-card h4 {
+    margin: 20px 0 10px 0;
+}
+
+.team-member-card p {
+    margin: 0;
+    opacity: 50%;
+}
+
