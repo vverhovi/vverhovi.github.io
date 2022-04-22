@@ -88,8 +88,9 @@ li {
     display: flex;
     justify-content: flex-start;
     background-image: url('images/main.jpg');
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-position: right;
+    background-size: cover;
     height: 580px;
     width: 100%;
     margin: 0 auto;
@@ -115,7 +116,7 @@ li {
     color: white;
     box-shadow: 15px 20px 30px 0px rgba(0, 0, 0, .15);
     position: relative;
-    margin-left: 320px;
+    margin-left: 120px;
 }
 
 .main-page-quote h4 {
@@ -281,7 +282,7 @@ button a {
 #cities {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 120px auto;
     max-width: 1440px;
     height: auto;
     padding: 0px 90px 100px 90px;
@@ -289,7 +290,6 @@ button a {
 }
 
 .cities-heading {
-    padding-top: 140px;
     font-family: 'Montserrat';
     font-weight: bold;
 }
@@ -391,7 +391,7 @@ button a {
 
 #help {
     background-image: url(images/help.jpg);
-    margin: 50px auto;
+    margin: 0 auto;
     background-repeat: no-repeat;
     display: flex;
     width: 1440px;
