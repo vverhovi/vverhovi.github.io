@@ -1,0 +1,380 @@
+:root{
+    --main-color: white;
+}
+
+/* 1. Global Styles
+======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;    
+    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto+Mono:wght@300&display=swap');
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;;
+}
+
+body {
+    max-width: auto;
+    max-height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--main-color);
+}
+
+.container {
+    display: flex;
+    margin: 0 8%;
+}
+
+/* 2. Fonts
+======================================== */
+
+h1, h2, h3, h4 {
+    color: #192038;
+    margin: 1rem 0;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    line-height: 3rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    color: #192038;
+}
+
+.menuNum,
+.menuString {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+}
+
+.menuNum {
+    color: #D9F561;
+}
+
+/* 3. Buttons
+======================================== */
+
+.buttonPrimary {
+    background-color: #192038;
+    border: 1px solid #D9F561;
+    border-radius: 4px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    color: white;
+    padding: 11px 23px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* 4. Header + Main
+======================================== */
+#header {
+    background-color: #192038;
+    max-width: 100%;
+}
+
+#header .container {
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menuOptionDark,
+.menuOptionWhite {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 3rem;
+}
+
+#header .menuString {
+    color: white;
+}
+
+.menuNum {
+    padding-right: 6px;
+}
+
+#home {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2rem;
+}
+
+#rotate{
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    letter-spacing: 0.7rem;
+    padding: 46px;
+    text-align: center;
+}
+
+.greeting {
+    height: 600px;
+    width: 900px;
+    background-color: #F8F9FA; 
+    border-radius: 4px;
+}
+
+.greeting h1 {
+    padding-top: 14rem;
+    padding-left: 6.5rem;
+}
+
+.greeting h4 {
+    padding-left: 6.5rem;
+    font-weight: 200;
+    opacity: 0.7; 
+}
+
+.photo {
+    height: 600px;
+    width: 387px;
+    margin-left: 30px;
+    background-color: #D9F561; 
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.photo > img {
+    margin: 0 35%;
+}
+
+.burgerMenu {
+    display: none;
+    margin-right: 3rem;
+
+}
+
+/* 5. About 
+======================================== */
+
+#about .container {
+    flex-direction: column;
+}
+
+.aboutDescription {
+    margin-top: 7rem;
+}
+
+.aboutDescription p {
+    max-width: 900px;
+}
+
+.skillsTools {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.skillsToolsList {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+}
+
+.skillsList {
+    display: flex;
+    flex-direction: column;
+}
+
+.skillsBullet {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem 0;
+}
+
+.menuOptionWhite {
+    padding: 1rem;
+    border-radius: 40px;
+    background-color: #D9F561;
+    max-width: 8.5rem;
+}
+
+.menuOptionWhite .menuNum {
+    color: #192038;
+}
+
+
+/* 5. Projects 
+======================================== */
+#projects {
+    background-color: #F8F9FA;
+}
+
+#projects .container {
+    flex-direction: column;
+}
+
+#projects .menuOptionWhite {
+    margin-top: 7rem;
+}
+
+.projectsHeading {
+    display: flex;
+    flex-direction: row;
+}
+
+.projectSelector {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.projectFilter {
+    margin: 0 1rem;
+}
+
+.projectCardBig {
+    margin: 4rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectCardText p {
+    max-width: 470px;
+}
+
+.projectCardText h4 {
+    margin-top: 2.5rem;
+}
+
+.projectCardText li {
+    margin: 0.5rem 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 200;
+    color:#192038;
+}
+
+.projectCardImage {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    text-align: center;
+}
+
+.projectCardImage .a {
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.projectCardImage .b {
+    position: absolute;
+}
+
+.projectCardImage h2 {
+    color: white;
+}
+/* 
+.projectCardImage h2 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+.projectOld {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.projectOldCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 2rem 0 8rem 0;
+    gap: 30px;
+
+}
+
+.projectCardSmall {
+    margin-bottom: 2rem;
+}
+
+
+/* 5. Contacts
+======================================== */
+#contacts {
+    background-color: #192038;
+    color: white;
+}
+
+#contacts h1 {
+    color: white;
+    margin: 2rem 0;
+}
+
+#contacts p {
+    color: white; 
+    max-width: 620px; 
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 200;
+}
+
+#contacts .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+#contacts .menuOptionDark {
+    margin-top: 8rem;
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+}
+
+.gitHub,
+.linkedIn,
+.instagram {
+    margin: 0 1.5rem;
+}
