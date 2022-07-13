@@ -1,14 +1,20 @@
-:root{
-    --main-color: white;
-}
-
-/* 1. Global Styles
-======================================== */
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-size: 16px;
+}
+
+body {
+    max-width: auto;
+    height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;;
 }
 
 @font-face {
@@ -17,26 +23,112 @@
     src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto+Mono:wght@300&display=swap');
 }
 
-html {
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;;
+#aboutMe,
+#skills,
+#projects,
+#footer,
+.projectSmall {
+    margin-left: 8rem;
+    margin-right: 5rem;
+    margin-bottom: 4rem;
 }
 
-body {
-    max-width: auto;
-    max-height: 100%;
-    margin: 0;
-    box-sizing: border-box;
-    background-color: var(--main-color);
+
+/* Grid + Responsive */
+[class ^= "box-"] {
+    display: grid;
 }
 
 .container {
-    display: flex;
-    margin: 0 8%;
+    height: 90vh;
+    width: 100%;
+    margin: 0px auto;
+
+    display: grid;
+    gap: 20px;
 }
 
-/* 2. Fonts
-======================================== */
+.container .box-3 {
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 90px 400px 160px 160px auto auto 260px; 
+    }
+
+    .container .box-1 {
+        grid-column: span 4;
+    }
+
+    .container .box-2 {
+        grid-column: span 4;
+    }
+
+    .container .box-4 {
+        grid-column: span 4;
+    }
+
+    .container .box-5 {
+        grid-column: span 4;
+    }
+
+    .container .box-6 {
+        grid-column: span 4;
+    }
+
+    .container .box-7 {
+        grid-column: span 4;
+    }
+
+    .container .box-8 {
+        grid-column: span 4;
+    }
+}
+
+@media (min-width: 1080px) {
+
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 90px 600px auto auto auto auto auto; 
+    }
+
+    .container .box-1 {
+        grid-column: span 4;
+    }
+
+    .container .box-2 {
+        grid-column: span 3;
+    }
+
+    .container .box-3 {
+        display: block;
+    }
+
+    .container .box-4 {
+        grid-column: span 4;
+    }
+
+    .container .box-5 {
+        grid-column: span 4;
+    }
+
+    .container .box-6 {
+        grid-column: span 4;
+    }
+
+    .container .box-7 {
+        grid-column: span 4;
+    }
+
+    .container .box-8 {
+        grid-column: span 4;
+    }
+}
+
+/* Fonts */
 
 h1, h2, h3, h4 {
     color: #192038;
@@ -83,8 +175,7 @@ p {
     color: #D9F561;
 }
 
-/* 3. Buttons
-======================================== */
+/* Buttons */
 
 .buttonPrimary {
     background-color: #192038;
@@ -99,22 +190,21 @@ p {
     display: inline-block;
 }
 
-/* 4. Header + Main
-======================================== */
+/* 1. box-1 */
 #header {
-    background-color: #192038;
+    background-color: #061731;
     max-width: 100%;
-}
-
-#header .container {
-    align-items: center;
-    justify-content: space-between;
     padding: 1rem 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .menu {
     display: flex;
     align-items: center;
+    margin-right: 5%;
 }
 
 .menuOptionDark,
@@ -132,24 +222,35 @@ p {
     padding-right: 6px;
 }
 
+.burgerMenu {
+    display: none;
+    margin-right: 3rem;
+
+}
+
+/* 2. box-2 */
+
 #home {
     display: flex;
     justify-content: flex-start;
-    margin-top: 2rem;
+    background-color: #F8F9FA; 
 }
 
-#rotate{
+#rotate {
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+#rotate h5 {
     transform: rotate(180deg);
     writing-mode: vertical-rl;
     letter-spacing: 0.7rem;
-    padding: 46px;
     text-align: center;
+    padding: 0 50px;
 }
 
 .greeting {
-    height: 600px;
-    width: 900px;
-    background-color: #F8F9FA; 
     border-radius: 4px;
 }
 
@@ -164,54 +265,55 @@ p {
     opacity: 0.7; 
 }
 
+/* 3. box-3 */
+
 .photo {
+    max-width: 400px;
     height: 600px;
-    width: 387px;
-    margin-left: 30px;
     background-color: #D9F561; 
     display: flex;
     align-items: center;
+    justify-content: center;
     border-radius: 4px;
+    margin-right: 10%; 
 }
 
-.photo > img {
-    margin: 0 35%;
-}
+/* box-4 */
 
-.burgerMenu {
-    display: none;
-    margin-right: 3rem;
-
-}
-
-/* 5. About 
-======================================== */
-
-#about .container {
+#aboutMe {
+    display: flex;
     flex-direction: column;
+    margin-top: 8rem;
 }
 
-.aboutDescription {
-    margin-top: 7rem;
-}
-
-.aboutDescription p {
+#aboutMe p {
     max-width: 900px;
 }
 
-.skillsTools {
-    margin-top: 5rem;
+.menuOptionWhite {
+    padding: 1rem;
+    border-radius: 40px;
+    background-color: #D9F561;
+    max-width: 8.5rem;
+}
+
+.menuOptionWhite .menuNum {
+    color: #192038;
+}
+
+/* box-5 */
+
+#skills {
     display: flex;
     flex-direction: column;
 }
 
-.skillsToolsList {
+.skillsContainer {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 6rem;
 }
 
-.skillsList {
+.tool {
     display: flex;
     flex-direction: column;
 }
@@ -233,19 +335,17 @@ p {
     color: #192038;
 }
 
+/* box-6 */
 
-/* 5. Projects 
-======================================== */
-#projects {
+.box-6 {
     background-color: #F8F9FA;
 }
 
-#projects .container {
+#projects {
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    display: flex;
     flex-direction: column;
-}
-
-#projects .menuOptionWhite {
-    margin-top: 7rem;
 }
 
 .projectsHeading {
@@ -306,50 +406,50 @@ p {
 .projectCardImage h2 {
     color: white;
 }
-/* 
-.projectCardImage h2 {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
 
-.projectOld {
+/* box-7 */
+
+.box-7 {
+    background-color: #F8F9FA;
+}
+
+.projectSmall {
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
 }
 
-.projectOldCards {
+.cardsList {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
     margin: 2rem 0 8rem 0;
     gap: 30px;
-
 }
 
-.projectCardSmall {
-    margin-bottom: 2rem;
-}
+/* box-8 */
 
-
-/* 5. Contacts
-======================================== */
-#contacts {
-    background-color: #192038;
+.box-8 {
+    background-color: #061731;
     color: white;
 }
 
-#contacts h1 {
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+}
+
+#footer h1 {
     color: white;
     margin: 2rem 0;
 }
 
-#contacts p {
+#footer p {
     color: white; 
     max-width: 620px; 
     margin-bottom: 2rem;
@@ -357,20 +457,10 @@ p {
     font-weight: 200;
 }
 
-#contacts .container {
-    flex-direction: column;
-    align-items: center;
-}
-
-#contacts .menuOptionDark {
-    margin-top: 8rem;
-}
-
 .social {
     display: flex;
     justify-content: space-between;
     margin-top: 4rem;
-    margin-bottom: 6rem;
 }
 
 .gitHub,
@@ -378,3 +468,4 @@ p {
 .instagram {
     margin: 0 1.5rem;
 }
+
