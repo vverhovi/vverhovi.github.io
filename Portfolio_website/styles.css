@@ -127,22 +127,75 @@ html {
         grid-column: span 4;
     }
 
+    #header .menuOptionDark {
+        display: none;
+    }
+
+    .burgerMenu {
+        display: block;
+    }
+    
+    #home {
+        margin: 0 3rem;
+        border-radius: 4px;
+        height: 400px;
+    }
+
+    .greeting h1 {
+        padding-left: 8rem;
+    }
+
+    .card-2-text {
+        margin-left: 0;
+        margin-bottom: 3.5rem;
+    }
+
+    .cardsList {
+        justify-content: flex-start;
+    }
+
+    .card-1 {
+        width: 450px;
+    }
+
+    .tool {
+        margin-top: 2rem;
+    }
     
 }
 
 @media (max-width: 1200px) {
 
-    .projectCardBig {
+    .pro-card-1 {
         flex-wrap: wrap;
+        margin-top: 1rem;
     }
 
-    .projectImage {
-       margin: 0; 
+    .pro-card-2 {
+        flex-wrap: wrap-reverse;
     }
 
-    .projectCardText p {
-        max-width: 900px;
+    .card-1-text p {
+        min-width: 1000px;
     }
+
+    .card-2-text {
+        margin-left: 0;
+        margin-bottom: 3.5rem;
+    }
+
+    .cardsList {
+        justify-content: flex-start;
+    }
+
+    .card-1 {
+        width: 450px;
+    }
+
+    .tool {
+        margin-top: 2rem;
+    }
+
 }
 
 
@@ -189,6 +242,18 @@ p {
 
 .menuNum {
     color: #D9F561;
+}
+
+a {
+    text-decoration: none;
+    color: #061731;
+    font-size: 1.25rem;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #047AF5;
+    transition: 0.2s;
 }
 
 /* Buttons */
@@ -337,6 +402,7 @@ p {
 .tool {
     display: flex;
     flex-direction: column;
+    width: 300px;
 }
 
 .skillsBullet {
@@ -399,7 +465,7 @@ p {
 
 .card-1-text p,
 .card-2-text p {
-    max-width: 600px;
+    width: 600px;
 }
 
 .card-1-text li {
@@ -410,23 +476,24 @@ p {
 }
 
 .card-1-img {
-    width: 50%;
     height: 380px;
-    margin-top: 2rem;
-
-    display: flex;
-    justify-content: center;
+    margin-top: 4rem;
 }
 
-.card-1-img > img {
+.img-1,
+.card-2-img > img {
     max-width: 100%;
     height: auto;
     display: block;
     transition: 1s;
+}
+
+.img-1 {
     box-shadow: 10px 5px 30px #E7EBF0;
 }
 
-.card-1-img > img:hover {
+.img-1:hover,
+.card-2-img > img:hover {
     transition: 1s;
     transform: scale(1.1);
 }
@@ -439,6 +506,10 @@ p {
 
 .card-2-text {
     margin-left: 6rem;
+}
+
+.card-2-img {
+    height: 420px;
 }
 
 
@@ -488,7 +559,6 @@ p {
     max-width: 90%;
     box-shadow: 10px 5px 30px #ededed;
     transition: 0.8s;
-
 }
 
 .card-1 img:hover {
@@ -548,9 +618,11 @@ p {
     margin-top: 4rem;
 }
 
-.gitHub,
-.linkedIn,
-.instagram {
+.icon {
     margin: 0 1.5rem;
 }
 
+.icon:hover {
+    fill: #D9F561;
+    cursor: pointer;
+}
