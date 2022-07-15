@@ -48,10 +48,6 @@ html {
     gap: 20px;
 }
 
-.container .box-3 {
-    display: none;
-}
-
 @media (min-width: 768px) {
 
     .container {
@@ -88,7 +84,7 @@ html {
     }
 }
 
-@media (min-width: 1080px) {
+@media (max-width: 1080px) {
 
     .container {
         grid-template-columns: repeat(4, 1fr);
@@ -100,11 +96,7 @@ html {
     }
 
     .container .box-2 {
-        grid-column: span 3;
-    }
-
-    .container .box-3 {
-        display: block;
+        grid-column: span 4;
     }
 
     .container .box-4 {
@@ -175,21 +167,17 @@ html {
         flex-wrap: wrap-reverse;
     }
 
-    .card-1-text p {
+    .card-1-text p,
+    .card-2-text p {
         min-width: 1000px;
     }
 
     .card-2-text {
-        margin-left: 0;
         margin-bottom: 3.5rem;
     }
 
     .cardsList {
         justify-content: flex-start;
-    }
-
-    .card-1 {
-        width: 450px;
     }
 
     .tool {
@@ -317,14 +305,13 @@ a:hover {
 
 #home {
     display: flex;
-    justify-content: flex-start;
-    background-color: #F8F9FA; 
+    justify-content: space-between;
+    gap: 30px;
 }
 
 #rotate {
     background-color: white;
     display: flex;
-    align-items: center;
 }
 
 #rotate h5 {
@@ -332,11 +319,24 @@ a:hover {
     writing-mode: vertical-rl;
     letter-spacing: 0.7rem;
     text-align: center;
-    padding: 0 50px;
+    padding: 0 40px;
 }
 
 .greeting {
     border-radius: 4px;
+    background-color: #F8F9FA; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.greeting-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.greeting-empty {
+    width: 500px;
 }
 
 .greeting h1 {
@@ -350,17 +350,15 @@ a:hover {
     opacity: 0.7; 
 }
 
-/* 3. box-3 */
-
 .photo {
-    max-width: 400px;
+    width: auto;
     height: 600px;
     background-color: #D9F561; 
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    margin-right: 10%; 
+    margin-right: 2rem;
 }
 
 /* box-4 */
@@ -478,6 +476,7 @@ a:hover {
 .card-1-img {
     height: 380px;
     margin-top: 4rem;
+    margin-right: 6rem;
 }
 
 .img-1,
@@ -502,10 +501,7 @@ a:hover {
     margin: 4rem 0;
     display: flex;
     justify-content: flex-start;
-}
-
-.card-2-text {
-    margin-left: 6rem;
+    column-gap: 3rem;
 }
 
 .card-2-img {
@@ -523,21 +519,21 @@ a:hover {
     margin-top: 4rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .cardsList {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 2rem 0 8rem 0;
     gap: 30px;
 }
 
 .card-1 {
     background-color: white;
-    width: 500px;
+    width: 420px;
     height: 350px;
     border-radius: 8px;
     overflow: hidden;
