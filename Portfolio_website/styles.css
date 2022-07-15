@@ -6,7 +6,6 @@
 }
 
 body {
-    max-width: auto;
     height: 100vh;
     margin: 0;
     box-sizing: border-box;
@@ -14,7 +13,8 @@ body {
 
 html {
     font-size: 16px;
-    font-family: 'Poppins', sans-serif;;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -46,7 +46,9 @@ html {
 
     display: grid;
     gap: 20px;
+    padding-top: 100px;
 }
+
 
 @media (min-width: 768px) {
 
@@ -81,6 +83,29 @@ html {
 
     .container .box-8 {
         grid-column: span 4;
+    }
+
+    #aboutMe,
+    #skills,
+    #projects,
+    .projectSmall {
+        margin-left: 7%;
+    }
+
+}
+
+@media (max-width: 886px) {
+
+
+    .projectSmall .card-1 {
+        min-width: 100%;
+    }
+
+    #aboutMe,
+    #skills,
+    #projects,
+    .projectSmall {
+        margin-left: 7%;
     }
 }
 
@@ -123,27 +148,34 @@ html {
         display: none;
     }
 
-    .burgerMenu {
+    .menu .burgerMenu {
         display: block;
     }
     
     #home {
-        margin: 0 3rem;
         border-radius: 4px;
         height: 400px;
     }
 
-    .greeting h1 {
-        padding-left: 8rem;
+    #home #rotate {
+        display: none;
+    }
+
+    #home .greeting {
+        width: 100%;
+    }
+    
+    #home .photo {
+        display: none;
+    }
+
+    .greeting-empty {
+        display: none;
     }
 
     .card-2-text {
         margin-left: 0;
         margin-bottom: 3.5rem;
-    }
-
-    .cardsList {
-        justify-content: flex-start;
     }
 
     .card-1 {
@@ -153,6 +185,7 @@ html {
     .tool {
         margin-top: 2rem;
     }
+
     
 }
 
@@ -169,15 +202,11 @@ html {
 
     .card-1-text p,
     .card-2-text p {
-        min-width: 1000px;
+        max-width: 1000px;
     }
 
     .card-2-text {
         margin-bottom: 3.5rem;
-    }
-
-    .cardsList {
-        justify-content: flex-start;
     }
 
     .tool {
@@ -239,9 +268,34 @@ a {
     transition: 0.3s;
 }
 
+
+/* Hover */
+
 a:hover {
     color: #047AF5;
     transition: 0.2s;
+}
+
+#header .menuString:hover {
+    color: #D9F561;
+}
+
+.menuHover {
+    color: #D9F561;
+}
+
+.buttonPrimary:hover {
+    background-color: #D9F561;
+    border: 1px solid #D9F561;
+    border-radius: 4px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    color: #061731;
+    padding: 11px 23px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .3s ease;
 }
 
 /* Buttons */
@@ -257,17 +311,23 @@ a:hover {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    transition: all .5s ease;
 }
 
 /* 1. box-1 */
+
 #header {
     background-color: #061731;
-    max-width: 100%;
-    padding: 1rem 0;
+    width: 100%;
+    height: 80px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    overflow: hidden;
+    position: fixed;
+    top: 0;
 }
 
 #logo {
@@ -289,6 +349,7 @@ a:hover {
 
 #header .menuString {
     color: white;
+    cursor: pointer;
 }
 
 .menuNum {
@@ -298,7 +359,6 @@ a:hover {
 .burgerMenu {
     display: none;
     margin-right: 3rem;
-
 }
 
 /* 2. box-2 */
@@ -306,7 +366,7 @@ a:hover {
 #home {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 2%;
 }
 
 #rotate {
@@ -327,25 +387,22 @@ a:hover {
     background-color: #F8F9FA; 
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .greeting-text {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin-left: 6rem;
+
 }
 
 .greeting-empty {
     width: 500px;
 }
 
-.greeting h1 {
-    padding-top: 14rem;
-    padding-left: 6.5rem;
-}
-
 .greeting h4 {
-    padding-left: 6.5rem;
     font-weight: 200;
     opacity: 0.7; 
 }
@@ -431,11 +488,12 @@ a:hover {
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
+    row-gap: 3%;
 }
 
 .projectsHeading {
     display: flex;
-    flex-direction: row;
+    align-items: center;
 }
 
 .projectSelector {
@@ -448,6 +506,10 @@ a:hover {
 
 .projectFilter {
     margin: 0 1rem;
+}
+
+.menuString {
+    width: auto;
 }
 
 .pro-card-1 {
@@ -475,8 +537,7 @@ a:hover {
 
 .card-1-img {
     height: 380px;
-    margin-top: 4rem;
-    margin-right: 6rem;
+    margin: 3rem 6rem 0 2rem;
 }
 
 .img-1,
@@ -497,11 +558,11 @@ a:hover {
     transform: scale(1.1);
 }
 
-.pro-card-2 {
-    margin: 4rem 0;
+#projects .pro-card-2 {
     display: flex;
     justify-content: flex-start;
-    column-gap: 3rem;
+    column-gap: 7%;
+    margin: 4rem 0;
 }
 
 .card-2-img {
@@ -516,7 +577,7 @@ a:hover {
 }
 
 .projectSmall {
-    margin-top: 4rem;
+    margin-top: 6rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -533,7 +594,7 @@ a:hover {
 
 .card-1 {
     background-color: white;
-    width: 420px;
+    width: 48%;
     height: 350px;
     border-radius: 8px;
     overflow: hidden;
@@ -550,8 +611,8 @@ a:hover {
 
 .card-1 img {
     position: absolute;
-    top: 50%;
-    left: 5%;
+    top: 45%;
+    left: 40%;
     max-width: 90%;
     box-shadow: 10px 5px 30px #ededed;
     transition: 0.8s;
@@ -560,7 +621,7 @@ a:hover {
 .card-1 img:hover {
     position: absolute;
     top: 35%;
-    left: 5%;
+    left: 25%;
     max-width: 90%;
     box-shadow: 10px 5px 30px #ededed;
     transition: 0.5s;
