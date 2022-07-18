@@ -42,7 +42,7 @@ html {
 
 .container {
     height: 90vh;
-    width: 100%;
+    max-width: 1366px;
     margin: 0px auto;
 
     display: grid;
@@ -145,11 +145,11 @@ html {
         grid-column: span 4;
     }
 
-    #header .menuOptionDark {
+    #header .nav-opt {
         display: none;
     }
 
-    .menu .burgerMenu {
+    .nav .burgerMenu {
         display: block;
     }
     
@@ -226,9 +226,14 @@ h1, h2, h3, h4 {
     font-weight: 600;
 }
 
-h1 {
+h1,
+.hi {
     font-size: 3.5rem;
     line-height: 3.5rem;
+}
+
+.hi {
+    color: #047AF5;
 }
 
 h2 {
@@ -252,13 +257,12 @@ p {
     color: #192038;
 }
 
-.menuNum,
-.menuString {
+.nav-opt{
     font-family: 'Roboto Mono', monospace;
     font-size: 0.9rem;
 }
 
-.menuNum {
+.nav-num {
     color: #D9F561;
 }
 
@@ -277,11 +281,7 @@ a:hover {
     transition: 0.2s;
 }
 
-#header .menuString:hover {
-    color: #D9F561;
-}
-
-.menuHover {
+.nav-opt:hover {
     color: #D9F561;
 }
 
@@ -289,6 +289,12 @@ a:hover {
     background-color: #D9F561;
     color: #061731;
     transition: all .2s ease;
+    cursor: pointer;
+}
+
+.buttonPrimary:focus {
+    background-color: #CCE03D;
+ 
 }
 
 .icon:hover {
@@ -299,12 +305,23 @@ a:hover {
 .opt-1:hover {
     box-shadow: 10px 10px 20px #E7EBF0;
     transition: all .2s ease;
+    cursor: pointer;
+
 }
 
 .opt-2:hover,
 .opt-3:hover {
     background-color: #D9F561;
     transition: all .2s ease;
+    box-shadow: 10px 10px 20px #E7EBF0;
+    cursor: pointer;
+
+}
+
+.opt-1:focus,
+.opt-2:focus,
+.opt-3:focus {
+    background-color: #CCE03D;
 }
 
 .smile-1 .bw_photo:hover {
@@ -353,25 +370,28 @@ a:hover {
     margin-left: 8%;
 }
 
-.menu {
+.nav {
     display: flex;
     align-items: center;
     margin-right: 5%;
 }
 
-.menuOptionDark,
+.nav-opt {
+    padding: 1rem;
+    margin-right: 2rem;
+}
 .menuOptionWhite {
     display: flex;
     justify-content: flex-start;
-    margin-right: 3rem;
+    padding: 1rem;
+    margin-right: 2rem;
 }
 
-#header .menuString {
+#header .nav-opt {
     color: white;
-    cursor: pointer;
 }
 
-.menuNum {
+.nav-num {
     padding-right: 6px;
 }
 
@@ -474,7 +494,7 @@ a:hover {
     max-width: 8.5rem;
 }
 
-.menuOptionWhite .menuNum {
+.menuOptionWhite .nav-num {
     color: #192038;
 }
 
@@ -490,6 +510,21 @@ a:hover {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+/* .tool h4::before {
+    background-color: linear-gradient(to left, #061731, #D9F561);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    content: attr(data-text);
+    transition: 0.7s;
+}
+
+.tool h4:hover::before {
+    width: 100%
+} */
+
 
 .tool {
     display: flex;
@@ -510,7 +545,7 @@ a:hover {
     max-width: 8.5rem;
 }
 
-.menuOptionWhite .menuNum {
+.menuOptionWhite .nav-num {
     color: #192038;
 }
 
@@ -569,7 +604,7 @@ a:hover {
 }
 
 
-.menuString {
+.nav-opt {
     width: auto;
 }
 
@@ -606,7 +641,7 @@ a:hover {
     max-width: 100%;
     height: auto;
     display: block;
-    transition: 1s;
+    transition: 0.6s;
 }
 
 .img-1 {
@@ -615,7 +650,7 @@ a:hover {
 
 .img-1:hover,
 .card-2-img > img:hover {
-    transition: 1s;
+    transition: 0.6s;
     transform: scale(1.1);
 }
 
@@ -649,7 +684,7 @@ a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 2rem 0 8rem 0;
+    margin: 4rem 0 8rem 0;
     gap: 30px;
 }
 
