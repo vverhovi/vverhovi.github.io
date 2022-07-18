@@ -21,6 +21,7 @@ html {
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto Mono', monospace;    
     src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto+Mono:wght@300&display=swap');
+    font-display: block;
 }
 
 #aboutMe,
@@ -286,22 +287,35 @@ a:hover {
 
 .buttonPrimary:hover {
     background-color: #D9F561;
-    border: 1px solid #D9F561;
-    border-radius: 4px;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 1rem;
     color: #061731;
-    padding: 11px 23px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    transition: all .3s ease;
+    transition: all .2s ease;
+}
+
+.tool:hover {
+    box-shadow: 30px 30px 30px #D9F561;
+    transition: 0.2s ease-out ;
+}
+
+.icon:hover {
+    transform: scale(1.3);
+    transform: 0.5s;
+}
+
+.opt-1:hover {
+    box-shadow: 10px 10px 20px #E7EBF0;
+    transition: all .2s ease;
+}
+
+.opt-2:hover,
+.opt-3:hover {
+    background-color: #D9F561;
+    transition: all .2s ease;
 }
 
 /* Buttons */
 
 .buttonPrimary {
-    background-color: #192038;
+    background-color: #061731;
     border: 1px solid #D9F561;
     border-radius: 4px;
     font-family: 'Roboto Mono', monospace;
@@ -328,6 +342,8 @@ a:hover {
     overflow: hidden;
     position: fixed;
     top: 0;
+    z-index: 1;
+
 }
 
 #logo {
@@ -409,13 +425,32 @@ a:hover {
 
 .photo {
     width: auto;
-    height: 600px;
+    height: 650px;
     background-color: #D9F561; 
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
     margin-right: 2rem;
+
+    position: relative;
+}
+
+.photo .smile-1,
+.photo .smile-2 {
+    padding: 0 100px;
+}
+
+.photo .smile-1 {
+    z-index: 9;
+    margin: 30px;
+}
+
+.photo .smile-2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
 }
 
 /* box-4 */
@@ -496,7 +531,7 @@ a:hover {
     align-items: center;
 }
 
-.projectSelector {
+.filter {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -504,9 +539,33 @@ a:hover {
     margin-left: 2rem;
 }
 
-.projectFilter {
-    margin: 0 1rem;
+.opt-1,
+.opt-2,
+.opt-3 {
+    margin: 0 .8rem;
+    height: 40px;
+    padding: 10px 12px;
+    border-radius: 4px;
 }
+
+.opt-1 {
+    width: 54px;
+    background-color: #D9F561;
+    transition: all .2s ease;
+}
+
+.opt-2 {
+    background-color: #E9ECEF;
+    width: 124px;
+    transition: all .2s ease;
+}
+
+.opt-3 {
+    background-color: #E9ECEF;
+    width: 78px;
+    transition: all .2s ease;
+}
+
 
 .menuString {
     width: auto;
@@ -601,7 +660,7 @@ a:hover {
 
     position: relative;
     place-content: center;
-    transition: 0.8s;
+    transition: 0.6s;
 }
 
 .card-1:hover {
@@ -615,7 +674,7 @@ a:hover {
     left: 40%;
     max-width: 90%;
     box-shadow: 10px 5px 30px #ededed;
-    transition: 0.8s;
+    transition: 0.6s;
 }
 
 .card-1 img:hover {
@@ -624,7 +683,7 @@ a:hover {
     left: 25%;
     max-width: 90%;
     box-shadow: 10px 5px 30px #ededed;
-    transition: 0.5s;
+    transition: 0.s;
 }
 
 .card-1 h4 {
@@ -677,9 +736,8 @@ a:hover {
 
 .icon {
     margin: 0 1.5rem;
+    transform: 0.5s;
+
 }
 
-.icon:hover {
-    fill: #D9F561;
-    cursor: pointer;
-}
+
