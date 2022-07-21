@@ -100,10 +100,6 @@ p {
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
 
-    .intro-left .intro-1 {
-        display: none;
-    }
-
     .intro-2 .intro-text {
         margin: 0 3rem;
     }
@@ -112,6 +108,10 @@ p {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
+
+    .intro-left .intro-1 {
+        display: none;
+    }
 
     .intro-left .intro-1 {
         padding-right: 2rem;
@@ -147,8 +147,10 @@ p {
 @media (max-width: 1399.98px) {
 
     .nav-container,
-    .intro-container {
-        padding: 0 2rem;
+    .intro-container,
+    .about-container,
+    .projects-container {
+        padding: 0 2.5rem;
     }
 }
 
@@ -328,7 +330,7 @@ p {
     margin: 10rem 0 4rem 0;
 }
 
-.about-text .pre-heading {
+.pre-heading {
     font-family: 'Roboto Mono', monospace;
     font-size: 0.9rem;
     color: #192038;
@@ -349,46 +351,43 @@ p {
     max-width: 900px;
 }
 
+/* Skills */
 
-/* box-4-skills 
-
-#skills {
+.about-container .skills {
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
+    row-gap: 1.5rem;
+    margin: 4rem 0 4rem 0;
 }
 
-.skillsContainer {
+.skills .skills-box {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 1rem;
+    row-gap: 3rem;
+
 }
 
-/* .tool h4::before {
-    background-color: linear-gradient(to left, #061731, #D9F561);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    white-space: nowrap;
-    content: attr(data-text);
-    transition: 0.7s;
-}
-
-.tool h4:hover::before {
-    width: 100%
-} 
-
-
-.tool {
+.skills-box .tool {
     display: flex;
     flex-direction: column;
+    row-gap: 1rem;
     width: 300px;
+
 }
 
-.skillsBullet {
+.skills-box .bullet {
     display: flex;
     flex-direction: row;
-    margin: 0.5rem 0;
+    column-gap: 0.5rem;
 }
+
+
+/* box-4-skills 
+
 
 .menuOptionWhite {
     padding: 1rem;
@@ -397,9 +396,6 @@ p {
     max-width: 8.5rem;
 }
 
-.menuOptionWhite .nav-num {
-    color: #192038;
-} */
 
 
 
