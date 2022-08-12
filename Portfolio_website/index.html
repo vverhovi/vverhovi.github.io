@@ -11,9 +11,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">    
 
+        <!-- Animation -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="styles.css">
 
+    
         <!-- Tab -->
         <title>Portfolio</title>
         <link rel="icon" href="images/favicon.svg" type="image/x-icon">
@@ -31,9 +35,8 @@
                 </div>
 
                 <div class="navbar-nav-right">
-                    <div class="navbar-nav">
-
-                        <ul class="nav-list">
+                    <div class="nav-desktop">
+                        <ul class="nav-menu">
                             <a href="#about"><li class="nav-link">
                                 <span class="nav-num">01.</span>About</li></a>
                             <a href="#projects"><li class="nav-link">
@@ -43,18 +46,31 @@
                         </ul>
                     </div>
 
+                    <div class="nav-mobile">
+                        <ul class="nav-menu">
+                            <a href="#about"><li class="nav-link">
+                                <span class="nav-num">01.</span>About</li></a>
+                            <a href="#projects"><li class="nav-link">
+                                <span class="nav-num">02.</span>Projects</li></a>
+                            <a href="#footer"><li class="nav-link">
+                                <span class="nav-num">03.</span>Contacts</li></a>
+                        </ul>
+                        <img src="images/menu/close_big.svg" class="close-menu">
+
+                    </div>
+    
+
                     <img src="images/burger_menu.svg" class="burg-menu">
                     <a href="https://drive.google.com/drive/u/1/my-drive"><button type="button" class="button-pr">Resume</button></a>    
 
                 </div>
+
 
             </div>
 
         </header>
 
         <main>
-
-            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
 
             <div id="intro">
 
@@ -72,8 +88,15 @@
         
                                 <h1>Hi, I'm Veranika</h1>
                                 <h4>
-                                    Front-end Engineer noobie, web-designer
-                                    and bit of [snowboarder].       
+                                    Codecademy trainee, Designer turned Developer
+                                    and bit of 
+                                    <span class="container-flip">
+                                        <span class="flip flip-snowboarder">snowboarder.</span>
+                                        <span class="flip flip-dog">weimaraners lover.</span>
+                                        <span class="flip flip-traveller">world traveller.</span>
+                                        <span class="flip flip-bookworm">a bookworm.</span>
+                                        <span class="flip flip-bike">bicycle enthusiast.</span>
+                                    </span>      
                                 </h4>
         
                             </div>
@@ -94,6 +117,8 @@
 
             </div>
 
+            <button onclick="toTop()" id="myBtn" title="Go to top">Top</button>
+
             <div id="about">
 
                 <div class="about-container">
@@ -101,7 +126,7 @@
                     <div class="about-text">
 
                         <div class="pre-heading">
-                            <h5>01. Enchanté</h5>
+                            <h5>01. Hi there!</h5>
                             <div class="underline"></div>
                         </div>
 
@@ -122,7 +147,7 @@
 
                         <div class="skills-box">
 
-                            <div class="tool">
+                            <div class="tool tool-1">
 
                                 <h4 data-text="text-animation">Programming Languages</h4>
     
@@ -143,7 +168,7 @@
     
                             </div>
 
-                            <div class="tool">
+                            <div class="tool tool-2">
 
                                 <h4>Tools & Platforms</h4>
     
@@ -164,7 +189,7 @@
     
                             </div>
     
-                            <div class="tool">
+                            <div class="tool tool-3">
 
                                 <h4>Libraries & Frameworks</h4>
     
@@ -175,7 +200,7 @@
     
                             </div>
 
-                            <div class="tool">
+                            <div class="tool tool-4">
 
                                 <h4>Design</h4>
     
@@ -251,11 +276,20 @@
                             <img src="images/portfolio_2.svg" class="img-2">
                         </div>
                         <div class="card-2-text">
-                            <h3><a href="https://vverhovi.github.io/responsive/" class="link-bg-white">Responsive web-page</a></h3>
+                            <h3><a href="https://vverhovi.github.io/responsive/" class="link-bg-white">Responsive Website</a></h3>
                             <p>
-                                For this project, I built a personal portfolio site, to share the projects that 
-                                I`ve built during my Codecademy path.   
+                                In this project, I was building 
+                                webpage that will dynamically respond as you 
+                                adjust the size of your screen! 
                             </p>
+                            <h4>Project Requirements:</h4>
+                            <ul>
+                                <li>Choose everything about your page, create your own web-design</li>
+                                <li>Making images toggle to certain percentages in terms of width after a certain minimum screen size</li>
+                                <li>Using a @media rule to change page layout and behavior based on size breakpoints.</li>
+                                <li>Employing responsive units em and rem to size and space elements with width and padding.</li>
+                            </ul>
+
                         </div>
                     </div>
 
@@ -275,24 +309,9 @@
                             <h2>Some Things I`ve Built</h2>
                             <p>Some describtion here</p>
                         </div>
-
-                        <!-- <div class="filter">
-    
-                            <div class="filter-opt">
-                                <h5>All</h5>
-                            </div>
-    
-                            <div class="filter-opt">
-                                <h5>Development</h5>
-                            </div>
-    
-                            <div class="filter-opt">
-                                <h5>Design</h5>
-                            </div>
-                        </div> -->
-
+                        
                         <div id="myBtnContainer">
-                            <button class="btn-active" onclick="filterSelection('all')"> All </button>
+                            <button class="btn active" onclick="filterSelection('all')"> All </button>
                             <button class="btn" onclick="filterSelection('development')"> Development </button>
                             <button class="btn" onclick="filterSelection('design')"> Design </button>
                         </div>
@@ -425,13 +444,14 @@
                         <a href="https://www.instagram.com/vverhovi/"><img src="images/brand/instagram.svg" class="icon"></a>
                         
                     </div>    
+
                 </div>
             </div>
         </footer>
 
         <!-- JavaScript -->
-        <script src="top_button.js"></script>
+        <script src="script.js"></script>
 
 
     </body>
-</html> 
+</html>
