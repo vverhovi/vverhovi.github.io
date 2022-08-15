@@ -20,6 +20,7 @@ body {
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    font-display: swap;
 }
 
 @font-face {
@@ -498,14 +499,16 @@ p {
 }
 
 .intro-3 .intro-photo {
-    background-image: url(images/smile-1.svg);
+    background-image: url(images/smile-1.png);
+    background-size: contain;
     width: 238px;
     height: 238px;
     position: relative;
 }
 
 .intro-3 .intro-photo:hover {
-    background-image: url(images/smile-2.svg);
+    background-image: url(images/smile-2.png);
+    background-size: contain;
 } 
 
 
