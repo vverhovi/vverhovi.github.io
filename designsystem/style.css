@@ -1,0 +1,357 @@
+/* 1. Global Styles
+======================================== */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0 auto;
+    overflow-x: hidden;
+    width: 100%; 
+}
+
+body {
+    background-color: #F2F2F6;
+    color: #0D1317;
+    position: relative;
+    max-height: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 2. Typography Styles
+======================================== */
+
+a {
+    color: #0d6efd;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: orange;
+}
+
+#header h1, h2 {
+    padding: 20px 40px;
+    color: #2E3A59;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+h2 {
+   padding-top: 30px; 
+   margin: 0 auto;
+}
+
+.text-attribute {
+    display: block;
+}
+
+#navigation-menu li {
+    display: inline;
+    border: 0;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: 'Lato', sans-serif;
+    padding: 0 20px;
+}
+
+.subheading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 16px;
+}
+
+.paragraph {
+    font-weight: normal;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fnt-wght {
+    font-weight: normal;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.roboto {
+    font-family: 'Roboto Serif', sans-serif;
+}
+
+.openSans {
+    font-family: 'Open Sans', sans-serif;;
+}
+
+.font-label {
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+.light {
+    font-weight: 100;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* 3. Structure Styles
+======================================== */
+
+.items-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 90%;
+    height: auto;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 15px;
+}
+
+#navigation-menu {
+    margin-right: 35px;
+}
+
+.colomns {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+.font-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    margin: 0 20px;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.text-container {
+    display: inline-block;
+    margin: 0 20px;
+    padding: 0 20px;
+}
+
+.font-panel {
+    width: 40%;
+    flex: 0 0 auto;
+    margin-bottom: 20px;
+}
+
+.text-panel {
+    flex: 0 0 auto;
+    margin-bottom: 40px;
+}
+
+.col-one {
+    margin-left: 20px;
+}
+
+.col-one, .col-two, .col-three {
+    margin-bottom: 1rem;
+    flex: 0 0 auto;
+    width: 32%;
+    padding: 0 20px 20px;
+}
+
+#textStyles {
+    margin-bottom: 40px;
+}
+
+
+/* 3. Components styles / Colors
+======================================== */
+
+.pd-bx {
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.main-blue {
+    color: white;
+    background-color: #0d6efd;
+    position: relative;
+    margin: 10px auto;
+}
+
+.main-indigo {
+    color: white;
+    background-color: #6610f2;
+    position: relative;
+    margin: 10px auto;
+}
+
+.main-red {
+    color: white;
+    background-color: #dc3545;
+    position: relative;
+    margin: 10px auto;
+}
+
+/* Blue colomn */
+
+.blue-100 {
+    background-color: #cfe2ff;
+    color: black;
+}
+
+.blue-200 {
+    background-color: #9ec5fe;
+    color: black;
+}
+
+.blue-300 {
+    background-color: #6ea8fe;
+    color: black;
+}
+
+.blue-400 {
+    background-color: #3d8bfd;
+    color: black;
+}
+
+.blue-500 {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.blue-600 {
+    background-color: #0a58ca;
+    color: white;
+}
+
+.blue-700 {
+    background-color: #084298;
+    color: white;
+}
+
+.blue-800 {
+    background-color: #052c65;
+    color: white;
+}
+
+.blue-900 {
+    background-color: #031633;
+    color: white;
+}
+
+/* Indigo colomn */
+
+.indigo-100 {
+    background-color: #e0cffc;
+    color: black;
+}
+
+.indigo-200 {
+    background-color: #c29ffa;
+    color: black;
+}
+
+.indigo-300 {
+    background-color: #a370f7;
+    color: black;
+}
+
+.indigo-400 {
+    background-color: #8540f5;
+    color: black;
+}
+
+.indigo-500 {
+    background-color: #6610f2;
+    color: white;
+}
+
+.indigo-600 {
+    background-color: #520dc2;
+    color: white;
+}
+
+.indigo-700 {
+    background-color: #3d0a91;
+    color: white;
+}
+
+.indigo-800 {
+    background-color: #290661;
+    color: white;
+}
+
+.indigo-900 {
+    background-color: #140330;
+    color: white;
+}
+
+/* Red colomn */
+
+.red-100 {
+    background-color: #f8d7da;
+    color: black;
+}
+
+.red-200 {
+    background-color: #f1aeb5;
+    color: black;
+}
+
+.red-300 {
+    background-color: #ea868f;
+    color: black;
+}
+
+.red-400 {
+    background-color: #e35d6a;
+    color: black;
+}
+
+.red-500 {
+    background-color: #dc3545;
+    color: white;
+}
+
+.red-600 {
+    background-color: #b02a37;
+    color: white;
+}
+
+.red-700 {
+    background-color: #842029;
+    color: white;
+}
+
+.red-800 {
+    background-color: #58151c;
+    color: white;
+}
+
+.red-900 {
+    background-color: #2c0b0e;
+    color: white;
+}
+

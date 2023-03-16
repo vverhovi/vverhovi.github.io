@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS Cheat Sheet Table</title>
+
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1 id="modules">.modules</h1>
+        <nav id="navigation">
+            <ul>
+                <li class="crumb"><a class="headerMenu" href="#background">background</a></li>
+                <li>/</li>
+                <li class="crumb"><a class="headerMenu" href="#color">color</a></li>
+                <li>/</li>
+                <li class="crumb"><a class="headerMenu" href="#display">display</a></li>
+                <li>/</li>
+                <li class="crumb"><a class="headerMenu" href="#fonts">fonts</a></li>
+                <li>/</li>
+                <li class="crumb"><a class="headerMenu" href="#text">text</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>css: cascading style <span class="cheat">cheat</span>sheet 🤓</h1>
+    </section>
+
+    <main>
+        <!--table one-->
+        <div id="background">
+            <h2>background</h2>
+
+            <table class="table">
+                <!--table's first row-->
+                <thead class="heading">
+                    <tr>
+                        <th class="one">CSS Properties</th>
+                        <th class="two">Values</th>
+                        <th class="three">Explanation</th>
+                    </tr>
+                </thead>
+
+                <!--table's second row-->
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="property">background-color</span>
+                        </td>
+                        <td>
+                            <span class="value">&lt;color&gt;</span>
+                        </td>
+                        <td class="explanation">
+                            <p>The uniform color of the background. It is rendered behind any <span
+                                    id="property">background-image</span> that is specified, although the color will
+                                still be visible through any transparency in the image.</p>
+                        </td>
+                    </tr>
+
+                    <!--table's third row-->
+                    <tr class="rowColor">
+                        <td>
+                            <span class="property">background-image</span>
+                        </td>
+                        <td class="value">none</td>
+                        <td class="explanation">
+                            <p>Is a keyword denoting the absence of images.</p>
+                        </td>
+                    </tr>
+
+                    <!--table's fourth row-->
+                    <tr class="rowColor">
+                        <td></td>
+                        <td class="value">&lt;image&gt;</td>
+                        <td class="explanation">
+                            <p>
+                                Is an <span id="value">&lt;image&gt;</span> denoting the image to display. There can be
+                                several of them, separated by commas, as multiple backgrounds are supported.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's fifth row-->
+                    <tr>
+                        <td>
+                            <span class="property">background-size</span>
+                        </td>
+                        <td class="value">contain</td>
+                        <td class="explanation">
+                            <p>
+                                Scales the image as large as possible within its container without cropping or
+                                stretching the image. If the container is larger than the image, this will result in
+                                image tiling, unless the <span id="value">&lt;background-repeat&gt;</span> property is
+                                set to <span id="value">no-repeat</span>.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's sixth row-->
+                    <tr>
+                        <td></td>
+                        <td class="value">cover</td>
+                        <td class="explanation">
+                            <p>
+                                Scales the image as large as possible to fill the container, stretching the image if
+                                necessary. If the proportions of the image differ from the element, it is cropped either
+                                vertically or horizontally so that no empty space remains.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's seventh row-->
+                    <tr>
+                        <td></td>
+                        <td class="value">auto</td>
+                        <td class="explanation">
+                            <p>
+                                Scales the background image in the corresponding direction such that its intrinsic
+                                proportions are maintained.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's seventh row-->
+                    <tr>
+                        <td></td>
+                        <td class="value">&lt;length&gt;</td>
+                        <td class="explanation">
+                            <p>
+                                Stretches the image in the corresponding dimension to the specified length. Negative
+                                values are not allowed.
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--table two-->
+        <div id="color">
+            <h2>color</h2>
+
+            <table class="table">
+                <!--table's first row-->
+                <thead class="heading">
+                    <tr>
+                        <th class="one">Properties</th>
+                        <th class="two">Values</th>
+                        <th class="three">Explanation</th>
+                    </tr>
+                </thead>
+
+                <!--table's second row-->
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="property">color</span>
+                        </td>
+                        <td>
+                            <span class="value">&lt;color&gt;</span>
+                        </td>
+                        <td class="explanation">
+                            <p>Sets the color of the textual and decorative parts of the element.</p>
+                        </td>
+                    </tr>
+
+                    <!--table's third row-->
+                    <tr class="rowColor">
+                        <td>
+                            <span class="property">color-adjust</span>
+                        </td>
+                        <td class="value">economy</td>
+                        <td class="explanation">
+                            <p>The user agent is allowed to make adjustments to the element as it deems appropriate and
+                                prudent in order to optimize the output for the device it's being rendered for. For
+                                example, when printing, a browser might opt to leave out all background images and to
+                                adjust text colors to be sure the contrast is optimized for reading on white paper. This
+                                is the default.</p>
+                        </td>
+                    </tr>
+
+                    <!--table's fourth row-->
+                    <tr class="rowColor">
+                        <td></td>
+                        <td class="value">exact</td>
+                        <td class="explanation">
+                            <p>
+                                The element's content has been specifically and carefully crafted to use colors, images,
+                                and styles in a thoughtful and/or important way, such that being altered by the browser
+                                might actually make things worse rather than better. The appearance of the content
+                                should not be changed except by the user's request. For example, a page might include a
+                                list of information with rows whose background colors alternate between white and a
+                                light grey. Removing the background color would decrease the legibility of the content.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's fifth row-->
+                    <tr>
+                        <td>
+                            <span class="property">opacity</span>
+                        </td>
+                        <td class="value">&lt;alpha-value&gt;</td>
+                        <td class="explanation">
+                            <p>
+                                A <span id="value">&lt;number&gt;</span> in the range 0.0 to 1.0, inclusive, or a <span
+                                    id="value">&lt;percentage&gt;</span> in the range 0% to 100%, inclusive,
+                                representing the opacity of the channel (that is, the value of its alpha channel). Any
+                                value outside the interval, though valid, is clamped to the nearest limit in the range.
+                            </p>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!--table three-->
+        <div id="display">
+            <h2>display</h2>
+
+            <table class="table">
+                <!--table's first row-->
+                <thead class="heading">
+                    <tr>
+                        <th class="one">Data Types</th>
+                        <th class="two">Syntax</th>
+                        <th class="three">Explanation</th>
+                    </tr>
+                </thead>
+
+                <!--table's second row-->
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="property">&lt;display-outside&gt;</span>
+                        </td>
+                        <td>
+                            <span class="value">block</span>
+                        </td>
+                        <td class="explanation">
+                            <p>The element generates a block element box, generating line breaks both before and after
+                                the element when in the normal flow.</p>
+                        </td>
+                    </tr>
+
+                    <!--table's third row-->
+                    <tr>
+                        <td></td>
+                        <td class="value">inline</td>
+                        <td class="explanation">
+                            <p>
+                                The element generates one or more inline element boxes that do not generate line breaks
+                                before or after themselves. In normal flow, the next element will be on the same line if
+                                there is space.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's fourth row-->
+                    <tr>
+                        <td>
+                            <span class="property">&lt;display-inside&gt;</span>
+                        </td>
+                        <td class="value">flow</td>
+                        <td class="explanation">
+                            <p>
+                                The element lays out its contents using flow layout (block-and-inline layout).
+                            </p>
+                            <p>
+                                If its outer display type is <span id="value">inline</span> or <span
+                                    id="value">run-in</span>, and it is participating in a block or inline formatting
+                                context, then it generates an inline box. Otherwise it generates a block container box.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's fifth row-->
+                    <tr>
+                        <td></td>
+                        <td class="value">flow-root</td>
+                        <td class="explanation">
+                            <p>
+                                The element generates a block element box that establishes a new block formatting
+                                context, defining where the formatting root lies.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's sixth row-->
+                    <tr>
+                        <td></td>
+                        <td class="value">table</td>
+                        <td class="explanation">
+                            <p>
+                                These elements behave like HTML <span id="value">table</span> elements. It defines a
+                                block-level box.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's seventh row-->
+                    <tr>
+                        <td></td>
+                        <td class="value">flex</td>
+                        <td class="explanation">
+                            <p>
+                                The element behaves like a block element and lays out its content according to the
+                                flexbox model.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's eighth row-->
+                    <tr>
+                        <td></td>
+                        <td class="value">ruby</td>
+                        <td class="explanation">
+                            <p>
+                                The element behaves like an inline element and lays out its content according to the
+                                ruby formatting model. It behaves like the corresponding HTML <span
+                                    id="value">ruby</span> elements.
+                            </p>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+
+        <!--table four-->
+        <div id="fonts">
+            <h2>fonts</h2>
+
+            <table class="table">
+                <!--table's first row-->
+                <thead class="heading">
+                    <tr>
+                        <th class="one">Properties</th>
+                        <th class="two">Value</th>
+                        <th class="three">Explanation</th>
+                    </tr>
+                </thead>
+
+                <!--table's second row-->
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="property">font-family</span>
+                        </td>
+                        <td>
+                            <span class="value">&lt;family-name&gt;</span>
+                        </td>
+                        <td class="explanation">
+                            <p>
+                                The name of a font family. For example, "Times" and "Helvetica" are font families. Font
+                                family names containing whitespace should be quoted. For example: "Comic Sans MS".
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's third row-->
+                    <tr>
+                        <td></td>
+                        <td class="value">&lt;generic-name&gt;</td>
+                        <td class="explanation">
+                            <p>
+                                Generic font families are a fallback mechanism, a means of preserving some of the style
+                                sheet author's intent when none of the specified fonts are available. Generic family
+                                names are keywords and must not be quoted. A generic font family should be the last item
+                                in the list of font family names.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's fourth row-->
+                    <tr class="rowColor">
+                        <td>
+                            <span class="property">font-size</span>
+                        </td>
+                        <td class="value">&lt;length&gt;</td>
+                        <td class="explanation">
+                            <p>
+                                A positive <span id="value">&lt;length&gt;</span> value. For most font-relative units
+                                (such as em and ex), the font size is relative to the parent element's font size. </p>
+                            <p>
+                                For font-relative units that are root-based (such as rem), the font size is relative to
+                                the size of the font used by the <span id="value">&lt;html&gt;</span> (root) element.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's fifth row-->
+                    <tr class="rowColor">
+                        <td></td>
+                        <td class="value">&lt;percentage&gt;</td>
+                        <td class="explanation">
+                            <p>
+                                A positive <span id="value">&lt;percentage&gt;</span> value, relative to the parent
+                                element's font size. </p>
+                        </td>
+                    </tr>
+
+                    <!--table's sixth row-->
+                    <tr>
+                        <td>
+                            <span class="property">font-stretch</span>
+                        </td>
+                        <td class="value">normal</td>
+                        <td class="explanation">
+                            <p>
+                                Specifies a normal font face.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's seventh row-->
+                    <tr>
+                        <td></td>
+                        <td class="value">&lt;percentage&gt;</td>
+                        <td class="explanation">
+                            <p>
+                                A <span id="value">&lt;percentage&gt;</span> value between 50% and 200% (inclusive).
+                                Negative values are not allowed for this property.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's eighth row-->
+                    <tr>
+                        <td></td>
+                        <td class="value">ruby</td>
+                        <td class="explanation">
+                            <p>
+                                The element behaves like an inline element and lays out its content according to the
+                                ruby formatting model. It behaves like the corresponding HTML <span
+                                    id="value">ruby</span> elements.
+                            </p>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+
+        <!--table five-->
+        <div id="text">
+            <h2>text</h2>
+
+            <table class="table">
+                <!--table's first row-->
+                <thead class="heading">
+                    <tr>
+                        <th class="one">Properties</th>
+                        <th class="two">Value</th>
+                        <th class="three">Explanation</th>
+                    </tr>
+                </thead>
+
+                <!--table's second row-->
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="property">letter-spacing</span>
+                        </td>
+                        <td>
+                            <span class="value">normal</span>
+                        </td>
+                        <td class="explanation">
+                            <p>
+                                The normal letter spacing for the current font. Unlike a value of 0, this keyword allows
+                                the user agent to alter the space between characters in order to justify text.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's third row-->
+                    <tr>
+                        <td></td>
+                        <td class="value">&lt;length&gt;</td>
+                        <td class="explanation">
+                            <p>
+                                Specifies extra inter-character space in addition to the default space between
+                                characters. Values may be negative, but there may be implementation-specific limits.
+                                User agents may not further increase or decrease the inter-character space in order to
+                                justify text.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's fourth row-->
+                    <tr class="rowColor">
+                        <td>
+                            <span class="property">line-break</span>
+                        </td>
+                        <td class="value">auto</td>
+                        <td class="explanation">
+                            <p>
+                                Break text using the default line break rule.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's fifth row-->
+                    <tr class="rowColor">
+                        <td></td>
+                        <td class="value">loose</td>
+                        <td class="explanation">
+                            <p>
+                                Break text using the least restrictive line break rule. Typically used for short lines,
+                                such as in newspapers.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's sixth row-->
+                    <tr class="rowColor">
+                        <td></td>
+                        <td class="value">normal</td>
+                        <td class="explanation">
+                            <p>
+                                Break text using the most common line break rule.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's seventh row-->
+                    <tr class="rowColor">
+                        <td></td>
+                        <td class="value">strict</td>
+                        <td class="explanation">
+                            <p>
+                                Break text using the most stringent line break rule.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's eighth row-->
+                    <tr>
+                        <td>
+                            <span class="property">tab-size</span>
+                        </td>
+                        <td class="value">&lt;integer&gt;</td>
+                        <td class="explanation">
+                            <p>
+                                A multiple of the advance width of the space character (U+0020) to be used as the width
+                                of tabs. Must be nonnegative.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!--table's nineth row-->
+                    <tr>
+                        <td></td>
+                        <td class="value">&lt;length&gt;</td>
+                        <td class="explanation">
+                            <p>
+                                The width of tabs. Must be nonnegative.
+                            </p>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>
+            <il>difficult tasks are a source of opportunities.</il>
+        </p>
+        <p>All resources from <a class="footerLink" href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></p>
+    </footer>
+</body>
+
+
+</html>
