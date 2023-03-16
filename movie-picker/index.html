@@ -1,1 +1,105 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Meta-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Tab-->
+    <title>Document</title>
+    <link rel="icon" type="image/svg" href="">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+    <div class="pageOne">
+        <header id="header">
+            <div class="nav-container">
+                <button class="btnHome">.movie picker 🍿</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-container">
+                <h1 class="title">Let's find a MOVIE!</h1>
+                <button class="button">I feel lucky!</button>
+            </div>
+
+            <footer>
+                <div class="footer">
+                    <div class="social">
+
+                        <a href="https://github.com/vverhovi" target="_blank"><img src="images/brand/github.svg"
+                                class="icon"></a>
+                        <a href="https://www.linkedin.com/in/veranika-verkhovina-1969a6110/" target="_blank"><img
+                                src="images/brand/LinkedIn.svg" class="icon"></a>
+                        <a href="https://www.instagram.com/vverhovi/" target="_blank"><img
+                                src="images/brand/instagram.svg" class="icon"></a>
+
+                    </div>
+
+                </div>
+            </footer>
+        </main>
+
+    </div>
+
+    <div class="pageTwo">
+        <header id="header">
+            <div class="nav-container">
+                <button class="btnHome">.movie picker 🍿</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-container">
+
+                <h1 id="appTitle">Film Finder</h1>
+
+                <form id="genreForm">
+                    <label>Choose a genre:</label>
+                    <select name="genres" id="genres">
+                    </select>
+                </form>
+
+                <button id="playBtn" class="button">Let's Play!</button>
+                <div id="movieInfo">
+                    <div id="moviePoster"></div>
+                    <div id="movieText"></div>
+                </div>
+
+                <div id="likeOrDislikeBtns" hidden>
+                    <button id="likeBtn"><i class="fa-solid fa-thumbs-up"></i></button>
+                    <button id="dislikeBtn"><i class="fa-solid fa-thumbs-down"></i></button>
+                </div>
+            </div>
+
+            <footer>
+                <div class="footer">
+                    <div class="social">
+
+                        <a href="https://github.com/vverhovi" target="_blank"><img src="images/brand/github.svg"
+                                class="icon"></a>
+                        <a href="https://www.linkedin.com/in/veranika-verkhovina-1969a6110/" target="_blank"><img
+                                src="images/brand/LinkedIn.svg" class="icon"></a>
+                        <a href="https://www.instagram.com/vverhovi/" target="_blank"><img
+                                src="images/brand/instagram.svg" class="icon"></a>
+
+                    </div>
+
+                </div>
+            </footer>
+        </main>
+
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
